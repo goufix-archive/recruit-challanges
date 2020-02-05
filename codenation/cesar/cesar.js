@@ -46,7 +46,5 @@ module.exports = {
       .join("");
     return resp;
   },
-  encrypt: data => {
-    return sha1(data);
-  }
+  encrypt: (data) => sha1(data);
 };

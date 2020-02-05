@@ -1,10 +1,8 @@
 const { decode, encrypt } = require("./cesar");
 const fs = require("fs");
-const path = require("path");
 
 function getJson() {
-  const response = JSON.parse(fs.readFileSync("./answer.json", "utf-8"));
-  return response;
+  return JSON.parse(fs.readFileSync("./answer.json", "utf-8"));
 }
 const { numero_casas, cifrado: data } = getJson();
 
