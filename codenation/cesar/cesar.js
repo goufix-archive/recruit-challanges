@@ -32,10 +32,10 @@ module.exports = {
   decode: (data, numero_casas) => {
     const resp = data
       .split("")
-      .map(letter => {
-        const index = abc.indexOf(letter) - numero_casas;
-        if (letter === " " || letter === ".") {
-          return letter;
+      .map(letra => {
+        const index = abc.indexOf(letra) - numero_casas;
+        if (letra === " " || letra === ".") {
+          return letra;
         }
         if (index < 0) {
           return abc[26 + index];
@@ -46,5 +46,5 @@ module.exports = {
       .join("");
     return resp;
   },
-  encrypt: (data) => sha1(data);
+  encrypt: data => sha1(data)
 };
