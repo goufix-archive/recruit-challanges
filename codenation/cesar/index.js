@@ -1,14 +1,14 @@
-const { decode, encrypt } = require("./cesar");
-const fs = require("fs");
+const fs = require('fs');
+const { decode, encrypt } = require('./cesar');
 
 function getJSON() {
-  return JSON.parse(fs.readFileSync("./answer.json", "utf-8"));
+  return JSON.parse(fs.readFileSync('./answer.json', 'utf-8'));
 }
 
 const json = getJSON();
-const { numero_casas, cifrado: data } = json
+const { numeroCasas, cifrado: data } = json;
 
-const decoded = decode(data, numero_casas);
+const decoded = decode(data, numeroCasas);
 const crypted = encrypt(decoded);
 
 const newJson = JSON.stringify({
@@ -17,4 +17,4 @@ const newJson = JSON.stringify({
   resumo_criptografico: crypted
 });
 
-fs.writeFileSync("./answer.json", newJson);
+fs.writeFileSync('./answer.json', newJson);

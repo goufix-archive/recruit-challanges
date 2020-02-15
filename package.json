@@ -1,0 +1,12 @@
+{
+  "name": "@goufix/recruit-challanges",
+  "private": true,
+  "version": "1.0.0",
+  "repository": "https://github.com/goufix-archive/recruit-challanges.git",
+  "author": "<alifer.17.11@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-lffg": "^13.0.0"
+  }
+}
